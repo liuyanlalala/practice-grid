@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <script>
+
+        // var dpr, rem, scale;
+        // var docEl = document.documentElement;
+        // var fontEl = document.createElement('style');
+        // var metaEl = document.querySelector('meta[name="viewport"]');
+        //
+        // 设备像素比
+        // dpr = window.devicePixelRatio || 1;
+        // px转换为rem时除以的基值
+        // rem = docEl.clientWidth * dpr / 10;
+        // 缩放比列
+        // scale = 1 / dpr;
+
+        var pixRation = 1 / Math.round(window.devicePixelRatio); // 像素比
+        var html = document.documentElement;
+
+        document.write('<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale='+ pixRation +',' +
+            'minimum-scale='+ pixRation +',maximum-scale='+ pixRation +'">');
+
+        // 注意：确定设计稿的宽度
+        // 如：设计稿宽度为750，那么rem的变量就设置为750 / 25(自己给定) + 'rem'
+        html.style.fontSize = html.clientWidth / 25 + 'px';
+        console.log(html.clientWidth, '视图宽')
+    </script>
+
+    <link rel="stylesheet" href="css/case.css">
+</head>
+<body>
+<header class="header">
+    <div class="backBtn">
+        <!--用空格暂位-->
+        <i>&nbsp;</i>
+    </div>
+    <h1 class="logo">
+        <img src="imgs/logo.png" alt="">
+    </h1>
+    <div class="signOut">
+        <span>退出</span>
+        <i>&nbsp;</i>
+    </div>
+</header>
+<section class="info">
+    <div class="headerImg">
+        <img src="imgs/logo.png" alt="">
+    </div>
+    <p class="userName">
+        <span>我是一个程序员</span>
+        <img src="imgs/logo.png" alt="">
+    </p>
+    <p class="regTime">注册时间：2019-03-26</p>
+</section>
+<h3 class="title">个人资料</h3>
+<section class="menu">
+    <a href="#" class="item">
+        <i class="baseInfo">&nbsp;</i>
+        <span>基本信息</span>
+    </a>
+    <a href="#" class="item">
+        <i class="userInfo">&nbsp;</i>
+        <span>个人信息</span>
+    </a>
+    <a href="#" class="item">
+        <i class="vipInfo">&nbsp;</i>
+        <span>VIP信息</span>
+    </a>
+    <a href="#" class="item">
+        <i class="order">&nbsp;</i>
+        <span>我的订单</span>
+    </a>
+    <a href="#" class="item">
+        <i class="record">&nbsp;</i>
+        <span>激活记录</span>
+    </a>
+    <a href="#" class="item">
+        <i class="device">&nbsp;</i>
+        <span>视频激活设备</span>
+    </a>
+    <a href="#" class="item">
+        <i class="account">&nbsp;</i>
+        <span>绑定账号</span>
+    </a>
+    <a href="#" class="item">
+        <i class="more">&nbsp;</i>
+        <!--<span>基本信息</span>-->
+    </a>
+</section>
+<h3 class="title">安全设备</h3>
+<section class="safe">
+    <a href="#" class="item">
+        <i class="password">&nbsp;</i>
+        <span>修改密码</span>
+    </a>
+    <a href="#" class="item">
+        <i class="email">&nbsp;</i>
+        <span>修改绑定邮箱</span>
+    </a>
+</section>
+</body>
+</html>

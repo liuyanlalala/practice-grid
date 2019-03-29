@@ -1,0 +1,84 @@
+@import 'global';
+
+.grid-container {
+
+  height: 400/@rem;
+
+  // 使得当前元素的所有子元素自动变成网格项目
+  display: grid;
+  // 定义三列网格 每列宽度为整个宽度的1/3
+  // fr可以自动根据网格容器的宽度来计算列的宽度
+  grid-template-columns: 1fr 2fr 1fr;
+  // 用来指定列（或行）的间距
+  grid-gap: 5/@rem;
+
+  .grid-item {
+    background-color: lightsalmon;
+    height: 100/@rem;
+    &.a {
+      // 不知道为什么，css样式里不支持这种合并的写法
+      // 直接写在html的行间样式上，是支持的
+      //grid-column: 1 / 4;
+      // 拆分开写
+      // 网格线 列起始网格线 1开始
+      grid-column-start: 1;
+      // 网格线 列结束网格线 1开始
+      grid-column-end: 4;
+    }
+    &.b {
+      height: 200/@rem;
+      //grid-row: 2 / 4;
+      // 同上 行起始网格线
+      grid-row-start: 2;
+      // 行结束网格线
+      grid-row-end: 4;
+    }
+    &.c {
+      //height: 200/@rem;
+      // 列网格线从2开始，跨度是1个列网格线 span表示关键词
+      grid-column: 2 / span 1;
+      // 行网格线从2开始，跨度是2个行网格线
+      grid-row: 2 / span 2;
+
+      height: 150/@rem;
+      width: 225/@rem;
+      justify-self: center;
+      align-self: center;
+
+    }
+    &.d {
+      grid-row-start: 2;
+      grid-row-end: 4;
+      //height: 150/@rem;
+      // 问题：align-self属性要配合grid-row才起作用
+      align-self: end;
+    }
+    &.e {
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+
+  }
+
+}
+
+.grid-container1 {
+  margin-top: 50/@rem;
+  display: grid;
+  height: 222/@rem;
+  grid-template-rows: repeat(2, 100/@rem);
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #f0f0f0;
+  text-align: center;
+  line-height: 100/@rem;
+  grid-gap: 10/@rem;
+  border: 1/@rem solid #bbb;
+  box-sizing: border-box;
+  div {
+    background-color: #fff;
+  }
+}
+
+.div1 {
+  background-color: #888899;
+}

@@ -1,0 +1,77 @@
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+body {
+  font-size: 0.86666667rem;
+  font-family: '微软雅黑';
+  color: #738797;
+}
+a:hover {
+  color: #f00;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.grid-container {
+  height: 13.33333333rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 0.16666667rem;
+}
+.grid-container .grid-item {
+  background-color: lightsalmon;
+  height: 3.33333333rem;
+}
+.grid-container .grid-item.a {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.grid-container .grid-item.b {
+  height: 6.66666667rem;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+.grid-container .grid-item.c {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 2;
+  height: 5rem;
+  width: 7.5rem;
+  justify-self: center;
+  align-self: center;
+}
+.grid-container .grid-item.d {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  align-self: end;
+}
+.grid-container .grid-item.e {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.grid-container1 {
+  margin-top: 1.66666667rem;
+  display: grid;
+  height: 7.4rem;
+  grid-template-rows: repeat(2, 3.33333333rem);
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #f0f0f0;
+  text-align: center;
+  line-height: 3.33333333rem;
+  grid-gap: 0.33333333rem;
+  border: 0.03333333rem solid #bbb;
+  box-sizing: border-box;
+}
+.grid-container1 div {
+  background-color: #fff;
+}
+.div1 {
+  background-color: #888899;
+}
+/*# sourceMappingURL=practice.css.map */

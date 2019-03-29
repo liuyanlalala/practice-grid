@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习网格布局</title>
+    <script>
+        var pixRation = 1 / Math.round(window.devicePixelRatio);
+        var html = document.documentElement;
+
+        document.write('<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale='+ pixRation +',' +
+            'minimum-scale='+ pixRation +',maximum-scale='+ pixRation +'" >');
+        html.style.fontSize = html.clientWidth / 25 + 'px';
+
+    </script>
+
+    <link rel="stylesheet" href="css/practice.css">
+
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item a"></div>
+        <div class="grid-item b"></div>
+        <div class="grid-item c"></div>
+        <div class="grid-item d"></div>
+        <div class="grid-item e"></div>
+        <!--<div class="grid-item f"></div>-->
+        <!--<div class="grid-item g"></div>-->
+    </div>
+    <div class="grid-container1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <div class="div1">111</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
